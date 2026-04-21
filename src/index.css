@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; background: #fff; color: #000; }
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 768px) {
+  body, a, button, input, select, [role="button"] { cursor: none; }
+}
+
+/* marquee */
+.marquee-track { display: flex; width: max-content; animation: marquee 40s linear infinite; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* reduced motion — disable heavy animations */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  *, *::before, *::after { animation-duration: .001s !important; transition-duration: .001s !important; }
+}
+
+/* selection */
+::selection { background: #000; color: #fff; }
+
+/* focus ring — keyboard users get a visible outline */
+:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
