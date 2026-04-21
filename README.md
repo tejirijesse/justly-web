@@ -1,25 +1,15 @@
 # Justly — Website
 
-Marketing site for Justly. **Your rights. Secured.**
+Single-file static marketing site. **Your rights. Secured.**
+
+## View
+Open `index.html` directly in a browser — no build step.
 
 ## Stack
-- React 18 + Vite
-- Tailwind CSS
-- Framer Motion
-- lucide-react
+- Pure HTML + vanilla JS
+- Tailwind CSS via Play CDN
+- Inline SVG icons (Lucide)
+- Google Fonts: Inter + JetBrains Mono
 
-## Develop
-```bash
-npm install
-npm run dev
-```
-Opens on `http://localhost:5173` (or next free port).
-
-## Build
-```bash
-npm run build
-npm run preview
-```
-
-## Structure
-Single-file React app — all components inline in `src/App.jsx`.
+## Deploy
+Any static host works — GitHub Pages, Netlify drop, Vercel, S3, Cloudflare Pages.
